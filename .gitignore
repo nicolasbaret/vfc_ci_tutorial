@@ -1,0 +1,5 @@
+*.vfcrun.h5
+*.vfcraw.h5
+
+dotprod
+*.o
