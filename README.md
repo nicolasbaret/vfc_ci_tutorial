@@ -5,7 +5,7 @@ This is a tutorial repository for the CI functionality of
 setup the CI pipeline and generate the report on a simple example.
 
 The goal of this example is to compute a basic dot product on two vectors
-generated with a fixed with random seed. The computation is done with a naive
+generated with a fixed random seed. The computation is done with a naive
 method, and the function that does it can be found at the beginning of `main.c`.
 The goal will be to use Verificarlo CI to measure the numerical accuracy of the
 naive implementation, before adding a better version of the algorithm and
