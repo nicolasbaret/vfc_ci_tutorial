@@ -18,12 +18,12 @@ float naiveDotprod(float * x, float * y, size_t n) {
 
 int main(void) {
 
-	float x, y [N];
+	float x [N], y [N];
 
 	srand(42);
 	for(size_t i=0; i<N; i++) {
-		x[i] = (float) rand() / RAND_MAX;
-		y[i] = (float) rand() / RAND_MAX;
+		x[i] = rand() / (float) RAND_MAX;
+		y[i] = rand() / (float) RAND_MAX;
 	}
 	srand(time(NULL));
 
