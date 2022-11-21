@@ -164,10 +164,10 @@ Once the test file has been committed to the CI branch, you can checkout to it
 and access the results :
 
 ```
-❯ git checkout vfc_ci master
+❯ git checkout vfc_ci_master
 ❯ git pull origin vfc_ci_master
 ❯ cd vfcruns
-❯ vfc_ci test -s
+❯ vfc_ci serve -s
 ```
 
 ... will open the report in your browser.
