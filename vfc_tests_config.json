@@ -1,0 +1,18 @@
+{
+    "make_command": "make CC=verificarlo-c",
+    "executables": [
+        {
+            "executable": "dotprod",
+            "vfc_backends": [
+                {
+                    "name": "libinterflop_mca.so",
+                    "repetitions": 20
+                },
+                {
+                    "name": "libinterflop_mca.so --mode=rr",
+                    "repetitions": 20
+                }
+            ]
+        }
+    ]
+}

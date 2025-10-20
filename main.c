@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+#include <vfc_probes.h>
 #define N 4096
 
 
@@ -17,7 +17,7 @@ float naiveDotprod(float * x, float * y, size_t n) {
 
 
 int main(void) {
-
+	vfc_probes probes = vfc_init_probes();
 	float x [N], y [N];
 
 	srand(42);
@@ -28,8 +28,9 @@ int main(void) {
 	srand(time(NULL));
 
 	float naiveRes = naiveDotprod(x, y, N);
+	vfc_probe(&probes, "dotprod_test", "naive", naiveRes);
 
 	printf("Naive dotprod = %.7f \n", naiveRes);
-
+	vfc_dump_probes(&probes);
 	return 0;
 }
